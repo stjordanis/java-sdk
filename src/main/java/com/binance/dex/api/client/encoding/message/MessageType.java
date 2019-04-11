@@ -14,7 +14,8 @@ public enum MessageType {
     StdSignature(null),
     PubKey("EB5AE987"),
     StdTx("F0625DEE"),
-    Vote("A1CADD36");
+    Vote("A1CADD36"),
+    Account("0x4BDC4C27");
 
     private byte[] typePrefixBytes;
 
