@@ -2,6 +2,7 @@ package com.binance.dex.api.client;
 
 import com.binance.dex.api.client.domain.*;
 import com.binance.dex.api.client.domain.broadcast.*;
+import com.binance.dex.api.client.domain.broadcast.Transaction;
 import com.binance.dex.api.client.domain.request.ClosedOrdersRequest;
 import com.binance.dex.api.client.domain.request.OpenOrdersRequest;
 import com.binance.dex.api.client.domain.request.TradesRequest;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public interface BinanceDexApiNodeClient extends BinanceDexApiRestClient {
 
-    BlockInfo getBlockInfo(Long height);
+    List<Transaction> getBlockTransactions(Long height);
 
     @Override
     default Time getTime() {

@@ -21,11 +21,11 @@ public class BinanceDexApiClientFactory {
     }
 
     public BinanceDexApiNodeClient newNodeRpcClient() {
-        return newNodeRpcClient(BinanceDexEnvironment.LOCAL_NODE.getBaseUrl());
+        return newNodeRpcClient(BinanceDexEnvironment.TEST_NET_NODE.getBaseUrl(), BinanceDexEnvironment.TEST_NET_NODE.getHrp());
     }
 
-    public BinanceDexApiNodeClient newNodeRpcClient(String baseUrl) {
-        return new BinanceDexApiNodeClientImpl(baseUrl);
+    public BinanceDexApiNodeClient newNodeRpcClient(String baseUrl, String hrp) {
+        return new BinanceDexApiNodeClientImpl(baseUrl, hrp);
     }
 
     public BinanceDexApiAsyncRestClient newAsyncRestClient() {

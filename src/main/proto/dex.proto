@@ -119,7 +119,7 @@ message AppAccount {
     baseAccount base = 1;
     string name = 2;
     repeated Token frozen = 3;
-    repeated Token coins = 4;
+    repeated Token locked = 4;
 }
 
 // sync/async response
